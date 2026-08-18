@@ -1,6 +1,8 @@
 <?php
 use RA\Route;
 
+Route::post('/auth/user/accept-invite', 'User\AcceptInviteAction');
+
 //no auth
 Route::group(['middleware' => ['RA\Auth\NotLogged']], function() {
     Route::post('/auth/user/register', 'User\RegisterAction');
@@ -8,8 +10,6 @@ Route::group(['middleware' => ['RA\Auth\NotLogged']], function() {
     Route::post('/auth/user/reset-password', 'User\ResetPasswordAction');
     Route::post('/auth/user/confirm', 'User\ConfirmAction');
     Route::post('/auth/user/login', 'User\LoginAction');
-
-    Route::post('/auth/user/accept-invite', 'User\AcceptInviteAction');
 });
 
 //with auth

@@ -32,6 +32,11 @@ class SetUser
 
         //format
         $user = ClassName::Presenter('User\Presenter')::run($user, $token->team_id);
+
+        if ( !$user->team ) {
+            return 'JWT Token is invalid.';
+        }
+
         \Auth::setUser($user);
 
         return true;

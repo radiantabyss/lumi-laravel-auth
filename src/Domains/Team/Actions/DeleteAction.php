@@ -5,6 +5,7 @@ use Illuminate\Routing\Controller as Action;
 use RA\Response;
 use RA\Auth\Services\ClassName;
 use RA\Auth\Events\TeamDeleted;
+use RA\Auth\Services\Jwt;
 
 class DeleteAction extends Action
 {

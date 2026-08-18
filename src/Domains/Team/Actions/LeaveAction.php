@@ -4,6 +4,7 @@ namespace RA\Auth\Domains\Team\Actions;
 use Illuminate\Routing\Controller as Action;
 use RA\Response;
 use RA\Auth\Services\ClassName;
+use RA\Auth\Services\Jwt;
 
 class LeaveAction extends Action
 {
